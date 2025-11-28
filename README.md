@@ -1,10 +1,5 @@
 # 💳 Credit Score Intelligence — AI-Powered Financial Risk Assessment
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.120.0-green.svg)](https://fastapi.tiangolo.com)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.50.0-red.svg)](https://streamlit.io)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 Credit Score Intelligence is an advanced AI/ML platform that predicts credit scores, explains ML decisions using SHAP, and generates natural-language reasoning using LLMs.  
 It includes a FastAPI backend, a Streamlit frontend, and a production-ready Docker + Nginx deployment.
 
@@ -246,7 +241,7 @@ credit-score-intelligence/
 ---
 ---
 
-## 🏆 Final Note — Built for Hack This Fall 2025
+## 🏆 Built for Hack This Fall 2025 — And Beyond
 
 This project is more than just a credit score predictor — it is a step toward democratizing financial insights using Explainable AI.  
 Our goal is to make credit scoring **transparent, fair, and accessible**, especially for individuals who struggle to understand why their financial profile is judged a certain way.
