@@ -1,0 +1,96 @@
+version: '3.8'
+
+# Local development overrides for docker-compose.yml
+# Run with: docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LOG_LEVEL=debug
+      - DEBUG=true
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./src:/app/src
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    command: >
+      python -m uvicorn src.api:app 
+      --host 0.0.0.0 
+      --port 8000 
+      --reload 
+      --reload-dir /app/src
+    restart: on-failure
+    networks:
+      - credit_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=false
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - STREAMLIT_LOGGER_LEVEL=debug
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./ui:/app/ui
+      - ./src:/app/src
+      - ./models:/app/models
+      - ./data:/app/data
+    command: streamlit run ui/app.py --logger.level=debug
+    depends_on:
+      - backend
+    restart: on-failure
+    networks:
+      - credit_network
+
+  # PostgreSQL Database (optional for future use)
+  # postgres:
+  #   image: postgres:15-alpine
+  #   environment:
+  #     POSTGRES_USER: credit_user
+  #     POSTGRES_PASSWORD: dev_password
+  #     POSTGRES_DB: credit_score_db
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - credit_network
+
+  # Redis Cache (optional for future use)
+  # redis:
+  #   image: redis:7-alpine
+  #   ports:
+  #     - "6379:6379"
+  #   networks:
+  #     - credit_network
+
+  # Adminer for database inspection (optional)
+  # adminer:
+  #   image: adminer
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - credit_network
+
+networks:
+  credit_network:
+    driver: bridge
+
+# volumes:
+#   postgres_data:
