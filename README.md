@@ -1,4 +1,6 @@
-# 💳 Credit Score Intelligence — AI-Powered Financial Risk Assessment
+# <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Times&weight=700&size=27&pause=1000&color=F6F748&width=435&lines=Hack+This+Fall+2025" alt="Typing SVG" /></a>
+
+# 💳 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Times&pause=1000&color=61F761&width=435&lines=Welcome+To+Credit+Score+Intellegence" alt="Typing SVG" /></a>
 
 Credit Score Intelligence is an advanced AI/ML platform that predicts credit scores, explains ML decisions using SHAP, and generates natural-language reasoning using LLMs.  
 It includes a FastAPI backend, a Streamlit frontend, and a production-ready Docker + Nginx deployment.
