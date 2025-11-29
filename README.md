@@ -40,10 +40,6 @@ It offers:
 - Feature-level contribution  
 - Transparent “Why this score?”  
 
-### 🤖 LLM-Based Natural Language Rationale
-Generates human-like explanations such as:  
-> “Your score is Good because your credit utilization is low and income is stable.”
-
 ### 🖥️ Streamlit Dashboard
 - Quick prediction  
 - Detailed explainability  
