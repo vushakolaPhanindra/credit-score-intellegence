@@ -1,6 +1,9 @@
-# <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Times&weight=700&size=27&pause=1000&color=F6F748&width=435&lines=Hack+This+Fall+2025" alt="Typing SVG" /></a>
-
-# 💳 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Times&pause=1000&color=61F761&width=435&lines=Welcome+To+Credit+Score+Intellegence" alt="Typing SVG" /></a>
+# <a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Playfair+Display&weight=700&size=38&duration=1800&pause=800&color=00E5FF&center=true&vCenter=true&width=600&lines=Hack+This+Fall+2025" />
+</a>
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=800&size=29&duration=2000&pause=900&color=FFD700&center=true&vCenter=true&width=600&lines=Welcome+to+Credit+Score+Intelligence;AI-Powered+Financial+Risk+Assessment" />
+</a>
 
 Credit Score Intelligence is an advanced AI/ML platform that predicts credit scores, explains ML decisions using SHAP, and generates natural-language reasoning using LLMs.  
 It includes a FastAPI backend, a Streamlit frontend, and a production-ready Docker + Nginx deployment.
